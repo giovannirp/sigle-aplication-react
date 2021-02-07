@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Header />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/detalhe/:id' component={Detalhe} />

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import CardImg from "../../assets/img_avatar1.png";
-
+import './Card.css'
 class Listing extends Component {
   constructor(props) {
     super(props);
@@ -39,11 +38,11 @@ class Listing extends Component {
                 <div className='card'>
                   <img className='card-img-top w-100' src={filmes.foto} />
                   <div className='card-body'>
-                    <h4 className='card-title'>{filmes.nome}</h4>
-                    <p className='card-text'>
+                    <h3 className='card-title tit-card'>{filmes.nome}</h3>
+                    <p className='card-text text-card'>
                       {filmes.sinopse}
                     </p>
-                    <Link to='/'>See Profile</Link>
+                    <Link to={`/detalhe/${filmes.id}`}>Acessar</Link>
                   </div>
                 </div>
               </div>
