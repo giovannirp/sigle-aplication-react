@@ -24,10 +24,10 @@ class Detalhe extends Component {
       <Fragment>
         <HeaderDetalhes />
         <div className='details mt-4 mb-4'>
-          <h1>{this.state.detalhes.nome}</h1>
-          <img src={this.state.detalhes.foto} className='img-rounded' />
+          <h1 className='mb-4 text-title'>{this.state.detalhes.nome}</h1>
+          <img src={this.state.detalhes.foto} className='rounded w-100' />
           {this.state.detalhes.length !== 0 && (
-            <h2 className='text-danger mt-3'>Detalhes do filme</h2>
+            <h2 className='text-secondary mt-3 text-title-2'>Detalhes do filme</h2>
           )}
           <p>{this.state.detalhes.sinopse}</p>
         </div>

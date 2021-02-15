@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 function Header() {
   return (
-    <header>
+    <header id='header'>
       <nav className='navbar navbar-expand-sm bg-dark navbar-dark'>
         <Link to='/' className='navbar-brand'>
           Todos Filmes

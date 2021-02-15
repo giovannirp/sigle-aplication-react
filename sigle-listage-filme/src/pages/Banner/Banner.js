@@ -3,7 +3,7 @@ import ImgBanner from "../../assets/banner.jpg";
 
 function Banner() {
   return (
-    <div>
+    <div id='banner'>
       <img src={ImgBanner} className='w-100' alt='Imagem do banner' />
     </div>
   );
