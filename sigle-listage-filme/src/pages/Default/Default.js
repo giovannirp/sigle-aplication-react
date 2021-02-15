@@ -1,4 +1,5 @@
 import React from "react";
+import AriaModalNew from "../../components/Modal/AriaModalNew";
 
 function DefaultPage() {
   return (
@@ -18,8 +19,10 @@ function DefaultPage() {
       make a type specimen book. It has survived not only five centuries, but
       also the leap into electronic typesetting, remaining essentially
       unchanged. It was popularised in the 1960s with the release of Letraset
-      ldus PageMaker including versions of Lorem
-      Ipsum.
+      ldus PageMaker including versions of Lorem.<br />
+      <strong className='text-danger d-block mt-3 mb-3'>Abre o Modal e veja mais opçoes</strong>
+      
+      <AriaModalNew />
     </div>
   );
 }
