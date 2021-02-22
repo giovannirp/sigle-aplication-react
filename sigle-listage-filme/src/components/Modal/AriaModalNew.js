@@ -5,14 +5,21 @@ import "./Modal.css";
 class AriaModalNew extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      modalActive: false,
+      modalActive: false
     };
+
+    this.nameInput = React.createRef();
 
     this.activateModal = this.activateModal.bind(this);
     this.deactivateModal = this.deactivateModal.bind(this);
     this.getApplicationNode = this.getApplicationNode(this);
+  }
+  
+  componentDidMount() {
+    if(this.nameInput.current) {
+      this.nameInput.current.focus();
+    }
   }
 
   activateModal = () => {
@@ -38,21 +45,30 @@ class AriaModalNew extends Component {
         underlayStyle={{ paddingTop: "2em" }}
       >
         <div id='demo-one-modal' className='containerModal'>
-          <div className='modal-body'>
+          <action className='modal-body'>
             <p>
-              Here is a modal <a href='#'>with</a> <a href='#'>some</a>{" "}
-              <a href='#'>focusable</a> parts.
+              <strong>Preencher dados</strong>
             </p>
-          </div>
-          <footer className='modal-footer'>
-            <button
-              id='demo-one-deactivate'
-              className='btn btn-danger'
-              onClick={this.deactivateModal}
-            >
-              Fechar Modal
-            </button>
-          </footer>
+            <label>Nome</label>
+            <input
+              type='text'
+              id='nameInput'
+              className='form-control'
+              name='nome'
+            />
+            <br />
+            <label>idade</label>
+            <input type='text' className='form-control' name='idade' />
+            <div className='mt-4 mb-3 d-flex justify-content-center'>
+              <button
+                id='demo-one-deactivate'
+                className='btn btn-danger'
+                onClick={this.deactivateModal}
+              >
+                Fechar Modal
+              </button>
+            </div>
+          </action>
         </div>
       </AriaModal>
     ) : (
